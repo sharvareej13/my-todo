@@ -4,7 +4,10 @@ const todoSchema = new mongoose.Schema({
     todo: String,
     check: Boolean,
     username: String,
-    date: Date
+    todoDate: {
+        type: Date,
+        default: Date.now
+        }
 
 });
 module.exports = mongoose.model('Todos' , todoSchema);

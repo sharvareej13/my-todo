@@ -33,7 +33,7 @@ router.post("/register", validateRegister(), function(req, res) {
     }).save(function(err, doc) {
       // if user already exists, register page is rendered with error message
       if (err) {
-        res.render("register", { message: "Username already exists." });
+        res.render("register", { message: "Email already exists." });
 
         // if not, user is redirected to index.
       } else {
@@ -96,7 +96,7 @@ router.post("/login", function(req, res) {
         } else {
           console.log("hash does not match");
           res.render("login", {
-            message: "Username or password is incorrect."
+            message: "Email or password is incorrect."
           });
         }
       });

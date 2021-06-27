@@ -10,11 +10,11 @@ router.post('/todo', function(req, res){
         todo: req.body.todo,
         check: req.body.check,
         username: req.session.user,
-        date: req.body.date
+        todoDate: Date.now()
     }).save(function(err, doc){
         if(err) throw err;
         console.log("item is saved");
-
+        
         //send response back with doc object created
         res.send(doc);
     });
