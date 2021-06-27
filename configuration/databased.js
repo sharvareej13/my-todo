@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const config = require('../config');
+const config = require('./config');
 
 
 const { dBB: { usernamedb, password, server, database } } = config;
